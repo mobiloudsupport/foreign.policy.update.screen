@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Foreign Policy - Update your app</title>
+
+	<style>
+		html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+		* {
+			box-sizing: border-box;
+		}
+		
+		html,body {height:100%;}
+		body {
+			font-family: 'Roboto', sans-serif;
+			background-color:#FFF;
+			color:#000;
+		}
+
+		img {
+			margin-bottom:30px;
+			max-width:35%;
+			height:auto;
+		}
+
+		h2 {
+			font-weight:bold;
+			font-size:28px;
+			margin-bottom:15px;
+		}
+		
+		p {
+			font-size:18px;
+			margin-bottom:30px;
+			line-height:1.5rem;
+		}
+		
+		button {
+			background:#EE3524;
+			padding:15px 30px;
+			color:#fff;
+			font-weight:bold;
+			text-transform:uppercase;
+			border:0;
+			max-width:100%;
+			width:60%;
+		}
+		
+		.wrap {
+			width:100%;
+		}
+		
+		.content {
+			padding:30px;
+			padding-top:60px;
+			width:100%;
+			max-width:100%;
+			text-align:center;
+		}
+	</style>
+	
+</head>
+
+<body>
+<script type="text/javascript">
+var __cfRLUnblockHandlers = 1 ;
+</script>
+	
+	<div class="wrap">
+		<div class="content">
+			<img src="fp-logo.png" width="207" height="131" />
+			<h2>Update required</h2>
+			<p>Please update to the latest version of Foreign Policy to continue reading</p>
+			<div class="update-button"></div>
+			<div class="user-agent"></div>
+		</div>
+	</div>
+	
+	<script>		
+		const checkOne = navigator.userAgent.toLowerCase().indexOf('iphone') > -1;
+		const checkTwo = navigator.userAgent.toLowerCase().indexOf('ipad') > -1;
+		
+		let agentBlock = document.querySelector('.user-agent');
+		let updateBlock = document.querySelector('.update-button');
+		
+		if (checkOne || checkTwo) {
+			updateBlock.innerHTML = '<button onclick="handleLink(\'https://apps.apple.com/us/app/foreign-policy/id1034756405\', \'\', \'external\'">Update</button>';
+		} else {
+			updateBlock.innerHTML = '<button onclick="handleLink(\'https://play.google.com/store/apps/details?id=com.foreignpolicy.android\', \'\', \'external\'">Update</button>';
+		};
+	</script>
+</body>
+</html>
