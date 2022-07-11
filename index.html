@@ -36,7 +36,7 @@
 			line-height:1.5rem;
 		}
 		
-		button {
+		a.button {
 			background:#EE3524;
 			padding:15px 30px;
 			color:#fff;
@@ -85,9 +85,9 @@ var __cfRLUnblockHandlers = 1 ;
 		let updateBlock = document.querySelector('.update-button');
 		
 		if (checkOne || checkTwo) {
-			updateBlock.innerHTML = '<button onclick="handleLink(\'https://apps.apple.com/us/app/foreign-policy/id1034756405\', \'\', \'external\'">Update</button>';
+			updateBlock.innerHTML = '<a class="button" href="https://apps.apple.com/us/app/foreign-policy/id1034756405">Update</a>';
 		} else {
-			updateBlock.innerHTML = '<button onclick="handleLink(\'https://play.google.com/store/apps/details?id=com.foreignpolicy.android\', \'\', \'external\'">Update</button>';
+			updateBlock.innerHTML = '<a class="button" href="https://play.google.com/store/apps/details?id=com.foreignpolicy.android">Update</a>';
 		};
 	</script>
 </body>
